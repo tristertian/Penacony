@@ -1,0 +1,4 @@
+{
+    "clangd.checkUpdates": false,
+    "clangd.path": "/usr/sbin/clangd"
+}
