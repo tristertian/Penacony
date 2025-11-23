@@ -89,34 +89,3 @@ int main(){
     obj.print<string>(obj.get_word_cnt(), obj.get_words(), "words:");
     obj.print<char>(obj.get_symbol_cnt(), obj.get_others(), "symbols:");
 }
-// int main(){
-//     string a;   getline(cin, a);    a+=' ';
-//     char*p = &a[0];
-//     while (*p != '\0') {
-//         if (*p >= '0' && *p <= '9') {
-//             extract_num(p, nums, num_cnt);
-//             num_cnt++;
-//         } else if (*p >= 'a' && *p <= 'z'){
-//             extract_word(p, words, word_cnt);
-//             word_cnt++;
-//         } else if (*p=='=' || *p=='+' || *p==';' || *p=='(' || *p==')' || *p=='{' || *p=='}') {
-//             extract_symbol(p, others, symbol_cnt);
-//             symbol_cnt++;
-//         } else {
-//             p++;
-//         }
-//     }
-    
-//     cout << "There are " << num_cnt << " integers:";
-//     for (int i = 0; i < num_cnt; i++) {
-//         cout << nums[i] << (i!=num_cnt-1 ? ' ' : '\n');
-//     }
-//     cout << "There are " << word_cnt << " words:";
-//     for (int i = 0; i < word_cnt; i++) {
-//         cout << words[i] << (i!=word_cnt-1 ? ' ' : '\n');
-//     }
-//     cout << "There are " << symbol_cnt << " symbols:";
-//     for (int i = 0; i < symbol_cnt; i++) {
-//         cout << others[i] << (i!=symbol_cnt-1 ? ' ' : '\n');
-//     }
-// }
