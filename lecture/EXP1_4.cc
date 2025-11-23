@@ -12,5 +12,6 @@ int sum(string a){
 int main(){
     string n;  cin>>n;
     cout<<sum(n);
+    cout<<"\n田佩宁 202512898\n";
     return 0;
 }

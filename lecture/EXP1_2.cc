@@ -8,6 +8,8 @@ int main(){
         if(a=="300") {cout<<3;break;}
         cout<<a[i];
     }
-    cout<<"\n";
+    cout<<"\n";    
+    cout<<"\n田佩宁 202512898\n";
+
     return 0;
 }

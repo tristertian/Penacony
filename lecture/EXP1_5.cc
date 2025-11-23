@@ -12,5 +12,6 @@ int fac(int n){
 int main(){
     int n;  cin>>n;
     cout<<fac(n);
+    cout<<"\n田佩宁 202512898\n";
     return 0;
 }

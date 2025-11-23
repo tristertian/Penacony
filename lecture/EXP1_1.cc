@@ -9,7 +9,6 @@ int main(){
         a+=100000, b+=temp, temp*=2;
     }
     cout<<a<<"\n"<<b<<"\n";
+    cout<<"\n田佩宁 202512898\n";
     return 0;
 }
-
-

@@ -88,4 +88,5 @@ int main(){
     obj.print<int>(obj.get_num_cnt(), obj.get_nums(), "integers:");
     obj.print<string>(obj.get_word_cnt(), obj.get_words(), "words:");
     obj.print<char>(obj.get_symbol_cnt(), obj.get_others(), "symbols:");
+    cout<<"\n田佩宁 202512898\n";
 }

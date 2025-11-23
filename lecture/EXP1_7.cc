@@ -18,6 +18,6 @@ int main() {
         getline(cin, str);
         cout << invert(str) << endl;
     }
-    
+    cout<<"\n田佩宁 202512898\n";
     return 0;
 }

@@ -29,5 +29,6 @@ int main(){
     cout << "There are " << cnt << " integers:";
     for (int i = 0; i < cnt; i++) {
         cout << nums[i] << (i!=cnt-1 ? ' ' : '\n');
-    }    
+    }
+    cout<<"\n田佩宁 202512898\n";
 }

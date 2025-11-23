@@ -12,4 +12,5 @@ int main(){
     for (int i=flag-1; i>=0; i--){
         cout<<a[i]<<(i==0 ? '\n' : ' ');
     }
+    cout<<"\n田佩宁 202512898\n";
 }

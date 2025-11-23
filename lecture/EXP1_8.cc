@@ -18,5 +18,6 @@ int main() {
     int n;
     cin >> n;
     cout << isprime(n) << endl;
+    cout<<"\n田佩宁 202512898\n";
     return 0;
 }
