@@ -19,7 +19,7 @@ struct monitor{
 int select_execute_process(monitor* obj){
     int max_priority = -1;
     int selected_index = -1;
-    
+
     for (int i=0; i<4; i++) {
         if (obj[i].pState == 1 && obj[i].pCPU > 0) {
             if (obj[i].pPriority > max_priority) {
@@ -45,8 +45,7 @@ int main(){
                         {"360.exe",     102, 7, 1, 1, "360 safe protect"},
                         {"QQ.exe",      103, 5, 1, 4, "tencet QQ"},
                         {"CPPIDE.exe",  104, 3, 1, 2, "CFree 5.0"},}; 
-    int cnt=0;
-    
+    int cnt=0;    
     while (!is_allzero(process)){
         cnt++;
         int execute_index = select_execute_process(process);

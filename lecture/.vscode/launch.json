@@ -1,25 +1,21 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "C++ Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "/usr/sbin/gdb",
-            "preLaunchTask": "build with clang"
-        }
-    ]
-
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
-    //     "version": "0.2.0",
-    //     "configurations": []
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug with lldb",
+      "type": "lldb",                 // 依赖 CodeLLDB 插件
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "clang++ build current file"
+//      "miDebuggerPath": "/usr/bin/lldb", // 一般不用改
+//      "setupCommands": [
+//        {
+//          "description": "Enable pretty-printing for clang",
+//          "text": "settings set target.prefer-dynamic-value run-target"
+//        }
+//      ]
+    }
+  ]
 }
