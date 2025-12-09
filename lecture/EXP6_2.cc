@@ -4,8 +4,9 @@ using namespace std;
 template<typename T>
 class DataProcess{
     T* a;
+    int len;
 public:
-    DataProcess(T* array):a(array){};
+    DataProcess(T* array, int len=5):a(array){};
     T* sort(T* a, int left, int right) {
         int i = left, j = right;
         T flag = a[(left + right) / 2], temp;
@@ -21,7 +22,7 @@ public:
         if (i < right) sort(a, i, right);
         return a;
         }
-    void print(T* a, int len) {
+    void print() {
         cout << "before sort: ";
         for (int i = 0; i < len; i++) {
             cout << a[i] << (i == len - 1 ? '\n' : ' ');
@@ -41,7 +42,5 @@ int main() {
     DataProcess<int>_num1(num1);
     DataProcess<double>_num2(num2);
     DataProcess<char>_str(str);
-    print(num, 6);
-    cout << '\n';
-    print(str, 8);
+    
 }
