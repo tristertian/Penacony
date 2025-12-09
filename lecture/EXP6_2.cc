@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
+const int DefaultLen = 5;
+
 template<typename T>
 class DataProcess{
     T* a;
     int len;
 public:
-    DataProcess(T* array, int len=5):a(array){};
-    T* sort(T* a, int left, int right) {
+    DataProcess<T>(T* array, int l=DefaultLen):a(array), len(l){}
+    void sort(T*&a, int left, int right) {
         int i = left, j = right;
         T flag = a[(left + right) / 2], temp;
         do {
@@ -19,9 +21,8 @@ public:
             }
         } while (i <= j);
         if (left < j) sort(a, left, j);
-        if (i < right) sort(a, i, right);
-        return a;
-        }
+        if (i < right) sort(a,i, right);
+    }
     void print() {
         cout << "before sort: ";
         for (int i = 0; i < len; i++) {
@@ -36,11 +37,14 @@ public:
 };
 
 int main() {
-    int num1[] = {3,6,2,1,4};
-    double num2[] = {3.1, 1.2, 4.5, 1.1, 0.2};
-    char str[] = {'s','d','a','y','t'};
+    int num1[] = {3, 6, 2, 1, 4};
     DataProcess<int>_num1(num1);
+    double num2[] = {3.1, 1.2, 4.5, 1.1, 0.2};
     DataProcess<double>_num2(num2);
+    char str[] = {'s', 'd', 'a', 'y', 't'};
     DataProcess<char>_str(str);
-    
+
+    _num1.print();  cout<<'\n';
+    _num2.print();  cout<<'\n';
+    _str.print();   cout<<'\n';
 }
