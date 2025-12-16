@@ -3,12 +3,12 @@
 #include <iostream>
 using namespace std;
 
-template <class T>
+template <typename T>
 T maxof(T a, T b){
     return (a>b ? a: b);
 }
 
-//a specialization for const char* type
+//an explicit specialization for const char* type
 template<>
 const char* maxof (const char*a, const char*b){
     return strcmp(a,b)>0 ?a : b;

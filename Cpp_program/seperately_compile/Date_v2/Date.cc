@@ -30,21 +30,23 @@ Date Date::preceding_day() const {
     }
     return temp;
 }
-//String Stream字符串流
+//String Stream(字符串流)
 string Date::to_string() const {
     ostringstream s;
     s<<y<<" "<<m<<" "<<d;
     return s.str();
-}                                                   //create and retrun a string,
+}
+//create and retrun a string
+//by using stringstream, we can easily realize a function in shorter code length
 
 //operator overloading
-ostream& operator<<(ostream& s, const Date& x){
+ostream& operator<<(ostream& s, const Date& x){     //better use 'T&' to pass quote of obj. *SAVING COST*
     return s<<x.to_string();
-}
+}                                                   //insert a 'Date' type obj. into an ostream
 istream& operator>>(istream& s, Date& x){
     int yy, mm, dd;
     char ch;
     s>>yy>>ch>>mm>>ch>>dd;
     x = Date(yy, mm, dd);
     return s;
-}
+}                                                   //extract 3'int' & some 'char' from an istream
