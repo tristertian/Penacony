@@ -34,7 +34,7 @@ Date Date::preceding_day() const {
 string Date::to_string() const {
     ostringstream s;
     s<<y<<" "<<m<<" "<<d;
-    return s.str();
+    return s.str();             //???
 }
 //create and retrun a string
 //by using stringstream, we can easily realize a function in shorter code length
