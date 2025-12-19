@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Boolean.h"
 using namespace std;
 
