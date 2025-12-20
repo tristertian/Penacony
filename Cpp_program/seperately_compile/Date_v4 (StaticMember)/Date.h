@@ -15,6 +15,12 @@ public:
         return (year%400==0 || year%4==0 && year%100==0);
     }
     int year(){return y;}
+    int month(){return m;}
+    int day(){return d;}
+    bool is_leap() const {
+        return is_leap(y);
+    }
+    //unfinished//
 };
 
 #endif
