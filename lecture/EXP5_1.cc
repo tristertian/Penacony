@@ -7,11 +7,17 @@ private:
     int hour, minute, second;
     void normalize() {               // 统一
         int carry = second / 60;
-        if (second < 0) { carry = (second-59)/60; second += (-carry)*60; }
+        if (second < 0) { 
+            carry = (second-59)/60; 
+            second += (-carry)*60; 
+        }
         minute += carry, second %= 60;
 
         carry = minute/60;
-        if (minute < 0) { carry = (minute-59)/60; minute += (-carry)*60; }
+        if (minute < 0) { 
+            carry = (minute-59)/60; 
+            minute += (-carry)*60; 
+        }
         hour += carry, minute %= 60;
 
         hour %= 24;
@@ -19,35 +25,55 @@ private:
     }
 public:
     Time() : hour(0), minute(0), second(0) {}
-    Time(int hour, int minute, int second) : hour(hour), minute(minute), second(second) { normalize(); }
+    Time(int hour, int minute, int second) 
+    : hour(hour), minute(minute), second(second) { 
+        normalize(); 
+    }
 
     /* 输入输出 */
     friend istream& operator>>(istream& in, Time& t) {
         return in >> t.hour >> t.minute >> t.second;
     }
     friend ostream& operator<<(ostream& out, const Time& t) {
-        return out  <<setw(2)<<setfill('0')<<t.hour<<':'
-                    <<setw(2)<<setfill('0')<<t.minute<<':'
-                    <<setw(2)<<setfill('0')<<t.second<<'\n';
+        return out  
+        <<setw(2)<<setfill('0')<<t.hour<<':'
+        <<setw(2)<<setfill('0')<<t.minute<<':'
+        <<setw(2)<<setfill('0')<<t.second<<'\n';
     }
 
     /* 复合赋值 +=  -= */
     Time& operator+=(const Time& rhs) {
-        hour += rhs.hour; minute += rhs.minute; second += rhs.second;
+        hour += rhs.hour; 
+        minute += rhs.minute; 
+        second += rhs.second;
         normalize(); return *this;
     }
     Time& operator-=(const Time& rhs) {
-        hour -= rhs.hour; minute -= rhs.minute; second -= rhs.second;
+        hour -= rhs.hour; 
+        minute -= rhs.minute; 
+        second -= rhs.second;
         normalize(); return *this;
     }
 
     /* 前自增/自减 */
-    Time& operator++() { second++; normalize(); return *this; }
-    Time& operator--() { second--; normalize(); return *this; }
+    Time& operator++() { 
+        second++; normalize(); 
+        return *this; 
+    }
+    Time& operator--() { 
+        second--; normalize(); 
+        return *this; 
+    }
 
     /* 后自增/自减 */
-    Time operator++(int) { Time tmp=*this; ++(*this); return tmp; }
-    Time operator--(int) { Time tmp=*this; --(*this); return tmp; }
+    Time operator++(int) { 
+        Time tmp=*this; ++(*this); 
+        return tmp; 
+    }
+    Time operator--(int) { 
+        Time tmp=*this; --(*this); 
+        return tmp; 
+    }
 };
 
 int main() {
@@ -60,5 +86,7 @@ int main() {
     cout << (t2 += t1--) << '\n';
     cout << (--t1)       << '\n';
     cout << (t2 -= t1)   << '\n';
-    return 0;
+
+
+    cout<<"田佩宁 202512898\n";
 }

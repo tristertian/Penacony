@@ -8,7 +8,8 @@ class DataProcess{
     T* a;
     int len;
 public:
-    DataProcess<T>(T* array, int l=DefaultLen):a(array), len(l){}
+    DataProcess<T>(T* array, int l=DefaultLen) 
+    :a(array), len(l){}
     void sort(T*&a, int left, int right) {
         int i = left, j = right;
         T flag = a[(left + right) / 2], temp;
@@ -47,4 +48,6 @@ int main() {
     _num1.print();  cout<<'\n';
     _num2.print();  cout<<'\n';
     _str.print();   cout<<'\n';
+
+    cout<<"田佩宁 202512898\n";
 }

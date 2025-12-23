@@ -38,4 +38,6 @@ int main() {
     print(num, 6);
     cout << '\n';
     print(str, 8);
+
+    cout<<"田佩宁 202512898\n";
 }
