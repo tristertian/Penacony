@@ -1,21 +1,23 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
 struct monitor{
     string pName, pDesciption;
     int pID, pPriority, pState, pCPU;
-    monitor(string _pName, int _pID, int _pPriority, int _pState, int _pCPU, string _pDesciption){
+    monitor(string _pName, int _pID, int _pPriority, 
+        int _pState, int _pCPU, string _pDesciption){
         pName=_pName, pDesciption=_pDesciption;
-        pID=_pID, pPriority=_pPriority, pState=_pState, pCPU=_pCPU;
+        pID=_pID, pPriority=_pPriority, 
+        pState=_pState, pCPU=_pCPU;
     }   
     void display(int cnt){
-        cout<<setiosflags(ios::left)<<setw(2)<<cnt<<":"<<setw(12)
-            <<pName<<setw(5)<<pID<<setw(3)<<pPriority<<setw(3)
-            <<pState<<setw(3)<<pCPU<<pDesciption<<'\n';
+        cout<<left<<setw(2)<<cnt<<":"<<setw(12)
+            <<pName<<setw(5)<<pID
+            <<setw(3)<<pPriority<<setw(3)
+            <<pState<<setw(3)<<pCPU
+            <<pDesciption<<'\n';
     }
 };
-
 int select_execute_process(monitor* obj){
     int max_priority = 0;
     int selected_index = -1;                            //why not use 114514? because it cause a bug
@@ -41,10 +43,11 @@ bool is_allzero(monitor* obj){
 }
 
 int main(){
-    monitor process[]={ {"chrome.exe",  101, 10, 1, 3, "google chrome"},
-                        {"360.exe",     102, 7, 1, 1, "360 safe protect"},
-                        {"QQ.exe",      103, 5, 1, 4, "tencet QQ"},
-                        {"CPPIDE.exe",  104, 3, 1, 2, "CFree 5.0"},}; 
+    monitor process[]=
+    { {"chrome.exe",  101, 1, 1, 3, "google chrome"},
+      {"360.exe",     102, 7, 1, 1, "360 safe protect"},
+      {"QQ.exe",      103, 5, 1, 4, "tencet QQ"},
+      {"CPPIDE.exe",  104, 3, 1, 2, "CFree 5.0"},}; 
     int cnt=0;    
     while (is_allzero(process) != true){
         cnt++;
@@ -71,4 +74,6 @@ int main(){
         }
         cout << '\n';
     }
+
+    cout<<"田佩宁 202512898\n";
 }

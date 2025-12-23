@@ -22,11 +22,7 @@ void Student::init(){
 int Student::max(){
     int temp[] = {this->CPlusScore, this->AMathScore, this->CEngScore,};
     int max = 0;
-    for (int i=0; i<3; i++) {
-        if (temp[i]>max) {
-            max=temp[i];
-        }
-    }
+    for (int i=0; i<3; i++) {if (temp[i]>max) {max=temp[i];}}
     return max;
 }
 double Student::avg(){
@@ -55,5 +51,7 @@ int main(){
         a[i].init();
     }
     cout<<fixed<<setprecision(1)<<MaxAvg(a)<<'\n'
-        <<fixed<<setprecision(1)<<GlbAvg(a);
+        <<fixed<<setprecision(1)<<GlbAvg(a)<<'\n';
+
+    cout<<"田佩宁 202512898\n";
 }
