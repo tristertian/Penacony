@@ -17,24 +17,26 @@ public:
     Book();
     Book(std::string isbn, std::string title, std::string publisher, 
          std::string author, int stock, double price);
+
+    void display() const;   // 显示图书信息
+    bool isAvailable(int quantity) const;   // 检查是否足够销售
+
+    Book& operator=(const Book& x);
     
-    // Getter
-    std::string getISBN() const {return isbn;}
-    std::string getTitle() const {return title;}
-    std::string getPublisher() const {return publisher;}
-    std::string getAuthor() const {return author;}
-    int getStock() const {return stock;}
-    double getPrice() const {return price;}
-    // Setter
-    void setISBN(std::string isbn){ this->isbn = isbn; }
-    void setTitle(std::string title){this->title = title;}
-    void setPublisher(std::string publisher){this->publisher = publisher;}
-    void setAuthor(std::string author){this->author = author;}
-    void setStock(int stock){this->stock = stock;}
-    void setPrice(double price){this->price = price;}
-    
-    void display() const;                   // display book imformation
-    bool isAvailable(int quantity) const;   // check whether it's sufficient to sell
+    // // Getter
+    // std::string getISBN() const {return isbn;}
+    // std::string getTitle() const {return title;}
+    // std::string getPublisher() const {return publisher;}
+    // std::string getAuthor() const {return author;}
+    // int getStock() const {return stock;}
+    // double getPrice() const {return price;}
+    // // Setter
+    // void setISBN(std::string isbn){ this->isbn = isbn; }
+    // void setTitle(std::string title){this->title = title;}
+    // void setPublisher(std::string publisher){this->publisher = publisher;}
+    // void setAuthor(std::string author){this->author = author;}
+    // void setStock(int stock){this->stock = stock;}
+    // void setPrice(double price){this->price = price;}
 };
 
 #endif
