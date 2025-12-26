@@ -22,16 +22,16 @@ class Rectangle : public Shape2D {
     double w, h;
 public:
     Rectangle(double width, double height) : w(width), h(height) {}
-    double area() const override { return w * h; }
-    double perimeter() const override { return 2 * (w + h); }
+    double area()       const { return w * h; }
+    double perimeter()  const { return 2 * (w + h); }
 };
 
 class Circle : public Shape2D {
     double r;
 public:
     explicit Circle(double radius) : r(radius) {}
-    double area() const override { return M_PI * r * r; }
-    double perimeter() const override { return 2 * M_PI * r; }
+    double area()       const { return M_PI * r * r; }
+    double perimeter()  const { return 2 * M_PI * r; }
 };
 
 // 三维
@@ -39,29 +39,29 @@ class Sphere : public Shape3D {
     double r;
 public:
     explicit Sphere(double radius) : r(radius) {}
-    double surfaceArea() const override { return 4 * M_PI * r * r; }
-    double volume()      const override { return 4.0 / 3 * M_PI * r * r * r; }
+    double surfaceArea() const { return 4 * M_PI * r * r; }
+    double volume()      const { return 4.0 / 3 * M_PI * r * r * r; }
 };
 
 class Cylinder : public Shape3D {
     double r, h;
 public:
     Cylinder(double radius, double height) : r(radius), h(height) {}
-    double surfaceArea() const override {
+    double surfaceArea() const {
         return 2 * M_PI * r * r + 2 * M_PI * r * h; // 上下底+侧
     }
-    double volume() const override { return M_PI * r * r * h; }
+    double volume() const { return M_PI * r * r * h; }
 };
 
 class Cone : public Shape3D {
     double r, h;
 public:
     Cone(double radius, double height) : r(radius), h(height) {}
-    double surfaceArea() const override {
+    double surfaceArea() const {
         double l = std::sqrt(r * r + h * h); // 母线
         return M_PI * r * r + M_PI * r * l;
     }
-    double volume() const override { return M_PI * r * r * h / 3; }
+    double volume() const { return M_PI * r * r * h / 3; }
 };
 
 // 输出工具
