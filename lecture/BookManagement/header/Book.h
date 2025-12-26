@@ -18,16 +18,15 @@ public:
     Book(std::string isbn, std::string title, std::string publisher, 
          std::string author, int stock, double price);
 
-    void display() const;   // 显示图书信息
     bool isAvailable(int quantity) const;   // 检查是否足够销售
     
     // // Getter
-    // std::string getISBN() const {return isbn;}
-    // std::string getTitle() const {return title;}
-    // std::string getPublisher() const {return publisher;}
-    // std::string getAuthor() const {return author;}
-    // int getStock() const {return stock;}
-    // double getPrice() const {return price;}
+    // std::string ISBN() const {return isbn;}
+    // std::string Title() const {return title;}
+    // std::string Publisher() const {return publisher;}
+    // std::string Author() const {return author;}
+    // int Stock() const {return stock;}
+    // double Price() const {return price;}
     // // Setter
     // void setISBN(std::string isbn){ this->isbn = isbn; }
     // void setTitle(std::string title){this->title = title;}
@@ -35,6 +34,9 @@ public:
     // void setAuthor(std::string author){this->author = author;}
     // void setStock(int stock){this->stock = stock;}
     // void setPrice(double price){this->price = price;}
+
+    friend std::ostream& operator<<(std::ostream& s, const Book& x);
+    friend std::istream& operator>>(std::istream& s, Book& x);
 };
 
 #endif

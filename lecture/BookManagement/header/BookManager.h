@@ -16,7 +16,7 @@ public:
     void deleteBook();           // 删除图书
     
     // 辅助函数
-    int findBookByISBN(std::string isbn);  // 查找ISBN（-1表示未找到）
+    int findBook_ISBN(std::string isbn);  // 查找ISBN（-1表示未找到）
     bool isISBNExists(std::string isbn);   // 检查ISBN唯一性
 };
 

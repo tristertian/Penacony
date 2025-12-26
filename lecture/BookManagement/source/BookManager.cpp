@@ -1,10 +1,31 @@
 #include "BookManager.h"
-using namespace std;
+#include "Book.h"
 
-void BookManager::addBook(){}
+void BookManager::addBook(){
+    Book a; 
+    std::cin>>a;
+    books.push_back(a);
+}
 
-void BookManager::queryBook(){}
+void BookManager::queryBook(){
 
-void BookManager::modifyBook(){}
+}
 
-void BookManager::deleteBook(){}
+void BookManager::modifyBook(){
+
+}
+
+void BookManager::deleteBook(){
+
+}
+
+
+int findBook_ISBN(std::string isbn){
+    for ( : ) {
+    
+    }
+}
+
+bool isISBNExists(std::string isbn){
+
+}
