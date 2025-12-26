@@ -1,4 +1,0 @@
-CompileFlags:
-  Add:
-    - -I/workspaces/Penacony/lecture/BookManagement/header
-    - -std=c++17
