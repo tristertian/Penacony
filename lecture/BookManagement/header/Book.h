@@ -20,8 +20,6 @@ public:
 
     void display() const;   // 显示图书信息
     bool isAvailable(int quantity) const;   // 检查是否足够销售
-
-    Book& operator=(const Book& x);
     
     // // Getter
     // std::string getISBN() const {return isbn;}
