@@ -121,4 +121,6 @@ int main() {
     std::cout<<"Sum of Area: "<<SumOfShape::totalArea(shape_array, 6)<<"\n";
     std::cout<<"Sum of Perimeter: "<<SumOfShape::totalPerimeter(shape_array, 6)<< "\n";
     std::cout<<"Sum of Volume: "<<SumOfShape::totalVolume(shape_array, 6)<<"\n";
+
+    std::cout<<"田佩宁 202512898\n";
 }
