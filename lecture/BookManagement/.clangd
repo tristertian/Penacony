@@ -1,4 +1,0 @@
-CompileFlags:
-  Add:
-    - -I/home/Tristertian/programs/lecture/BookManagement/header
-    - -std=c++17
